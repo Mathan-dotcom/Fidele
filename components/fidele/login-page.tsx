@@ -79,6 +79,18 @@ export function LoginPage({ onNavigate, onLoginSuccess }: LoginPageProps) {
           <p className="text-white/40 text-xs uppercase tracking-widest mt-2">Your AI Health Companion</p>
         </div>
 
+        {/* Demo Login Auto-fill Helper */}
+        <div className="mb-6 bg-white/[0.01] border border-white/5 rounded-2xl p-4 text-center">
+          <p className="text-[11px] text-white/40 mb-2.5">Quickly test the platform with populated charts & data</p>
+          <button
+            type="button"
+            onClick={() => setFormData({ email: "demo.user@google.com", password: "password123" })}
+            className="px-4 py-1.5 border border-[#eca8d6]/20 bg-[#eca8d6]/5 text-[#eca8d6] hover:bg-[#eca8d6] hover:text-black hover:border-[#eca8d6] text-xs font-semibold rounded-full transition-all duration-300 active:scale-[0.98]"
+          >
+            Auto-fill Demo Account
+          </button>
+        </div>
+
         {/* Form */}
         <form onSubmit={handleLogin} className="space-y-6">
           {/* Email Input */}

@@ -65,6 +65,59 @@ async function seed() {
   const totalUsers = 100;
   const hashPass = hashPassword("password123");
 
+  // Seed a static known demo user
+  const staticDemoUser = {
+    email: "demo.user@google.com",
+    name: "Demo User",
+    passwordHash: hashPass,
+    userId: crypto.randomUUID(),
+    timestamp: new Date().toISOString(),
+    lastLogin: new Date().toISOString(),
+  };
+  try {
+    await docClient.send(new PutCommand({ TableName: USERS_TABLE, Item: staticDemoUser }));
+    
+    const medicalRecord1 = {
+      email: "demo.user@google.com",
+      medicalId: crypto.randomUUID(),
+      timestamp: new Date(Date.now() - 48*60*60*1000).toISOString(),
+      age: "30",
+      gender: "Male",
+      bloodType: "O+",
+      allergies: "None",
+      conditions: "Asthma",
+      medications: "Albuterol inhaler",
+      weight: "75 kg",
+      systolic: 120,
+      diastolic: 80,
+      heartRate: 72,
+      temperature: 98.6,
+    };
+
+    const medicalRecord2 = {
+      email: "demo.user@google.com",
+      medicalId: crypto.randomUUID(),
+      timestamp: new Date().toISOString(),
+      age: "30",
+      gender: "Male",
+      bloodType: "O+",
+      allergies: "None",
+      conditions: "Asthma",
+      medications: "Albuterol inhaler",
+      weight: "74 kg",
+      systolic: 118,
+      diastolic: 78,
+      heartRate: 68,
+      temperature: 98.4,
+    };
+
+    await docClient.send(new PutCommand({ TableName: MEDICAL_TABLE, Item: medicalRecord1 }));
+    await docClient.send(new PutCommand({ TableName: MEDICAL_TABLE, Item: medicalRecord2 }));
+    console.log("Seeded static demo user: demo.user@google.com");
+  } catch (err) {
+    console.error("Failed seeding static user:", err);
+  }
+
   for (let i = 1; i <= totalUsers; i++) {
     const fName = randItem(firstNames);
     const lName = randItem(lastNames);
