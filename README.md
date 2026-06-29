@@ -77,17 +77,6 @@ DYNAMODB_TABLE_NAME=HealthBotUsers
 DYNAMODB_MEDICAL_TABLE_NAME=HealthBotMedicalData
 ```
 
-### 2. Populate Mock Clinical Data
-We have provided a seeder script to populate your DynamoDB tables with **100 dummy users** (e.g. `james.smith57@google.com`) and **200 clinical vital history records** (2 snapshots per user to feed charts).
-
-Run the seeder with:
-```bash
-node scripts/seed.js
-```
-*Note: All seeded users use the password `password123`.*
-
----
-
 ## 🚀 Running the App
 
 ### Development Server
