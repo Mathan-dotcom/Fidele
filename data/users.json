@@ -1,0 +1,34 @@
+[
+  {
+    "name": "John doe",
+    "email": "you@example.com",
+    "passwordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "userId": "24a49dbc-e0b0-45fc-903b-adba57fc146d",
+    "timestamp": "2026-06-26T03:56:54.798Z",
+    "lastLogin": "2026-06-29T02:59:42.802Z"
+  },
+  {
+    "name": "Test User",
+    "email": "test@example.com",
+    "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "userId": "bda1438e-16f6-443f-968d-1a1f5864f4c9",
+    "timestamp": "2026-06-27T16:21:34.881Z",
+    "lastLogin": "2026-06-27T16:32:17.082Z"
+  },
+  {
+    "name": "John Doe",
+    "email": "testuser123@example.com",
+    "passwordHash": "ffc121a2210958bf74e5a874668f3d978d24b6a8241496ccff3c0ea245e4f126",
+    "userId": "6a6b95e7-03b4-4de0-9d68-9f05b028704f",
+    "timestamp": "2026-06-28T12:59:56.511Z",
+    "lastLogin": "2026-06-28T12:59:56.511Z"
+  },
+  {
+    "name": "Test User",
+    "email": "testuser@example.com",
+    "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "userId": "3d11924e-c0dd-4834-b051-4d4d35b62a7b",
+    "timestamp": "2026-06-28T14:42:38.765Z",
+    "lastLogin": "2026-06-28T14:42:38.765Z"
+  }
+]
